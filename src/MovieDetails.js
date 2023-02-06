@@ -20,7 +20,8 @@ const MovieDetails = () => {
             // console.log(res.data);
             setMovie(res.data);
         })
-    }, [])
+        /* any variable used inside useEffect needs to be listed in the dependancy */
+    }, [movieID]);
 
     const  { original_title, tagline, overview, poster_path } = movie;
 
